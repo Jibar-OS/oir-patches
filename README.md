@@ -33,7 +33,7 @@ for p in /path/to/oir-patches/patches/*.patch; do
 done
 ```
 
-Patches are split by file and numbered by apply order. Each has a `Signed-off-by` and a commit message explaining the edit.
+Patches are split by file and numbered by apply order. They are plain unified diffs (`git diff` output, not `git format-patch`) so they apply via `git apply` rather than `git am` — no `Signed-off-by` or commit-message header is included. The applying script is responsible for any logging.
 
 ## Forward-porting to a new AOSP bump
 

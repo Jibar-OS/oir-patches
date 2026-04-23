@@ -49,6 +49,3 @@ When upstream AOSP moves forward:
 - [`oir-framework-addons`](https://github.com/jibar-os/oir-framework-addons) — the new files these patches wire into place
 - [`manifest`](https://github.com/jibar-os/manifest) — applies this repo as part of tree assembly
 
-## Migration status
-
-🚧 Patches extraction in progress.

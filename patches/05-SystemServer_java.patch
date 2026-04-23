@@ -1,0 +1,20 @@
+diff --git a/services/java/com/android/server/SystemServer.java b/services/java/com/android/server/SystemServer.java
+index 9ab827e36eb6..bc0cd46ac101 100644
+--- a/services/java/com/android/server/SystemServer.java
++++ b/services/java/com/android/server/SystemServer.java
+@@ -3599,6 +3599,15 @@ public final class SystemServer implements Dumpable {
+         }
+         t.traceEnd();
+ 
++        t.traceBegin("StartOIRService");
++        try {
++            mSystemServiceManager.startService(
++                    com.android.server.oir.OIRService.class);
++        } catch (Throwable e) {
++            reportWtf("starting OIRService", e);
++        }
++        t.traceEnd();
++
+         t.traceEnd(); // startOtherServices
+     }
+ 

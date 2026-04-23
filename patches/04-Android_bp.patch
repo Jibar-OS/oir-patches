@@ -1,0 +1,39 @@
+diff --git a/services/core/Android.bp b/services/core/Android.bp
+index fab23ee1dfa7..3af00dabf224 100644
+--- a/services/core/Android.bp
++++ b/services/core/Android.bp
+@@ -215,6 +215,7 @@ java_library_static {
+         "com.android.media.audio-aconfig-java",
+         "icu4j_calendar_astronomer",
+         "android.security.aaid_aidl-java",
++        "oir_worker_aidl-java",
+         "netd-client",
+         "overlayable_policy_aidl-java",
+         "SettingsLibDeviceStateRotationLock",
+@@ -317,3 +318,26 @@ prebuilt_etc {
+     name: "core.protolog.pb",
+     src: ":gen-core.protolog.pb",
+ }
++
++// OIR v0.1: internal worker AIDL consumed by system/oird as cpp and by
++// services/core (OIRService) as java. Internal + single-owner, so unstable
++// (no API-version tracking) — A16 requires this or we'd get -V1-cpp names.
++aidl_interface {
++    name: "oir_worker_aidl",
++    unstable: true,
++    local_include_dir: "java",
++    srcs: [
++        "java/com/android/server/oir/IOirWorker.aidl",
++        "java/com/android/server/oir/IOirWorkerCallback.aidl",
++        "java/com/android/server/oir/IOirWorkerVectorCallback.aidl",
++        "java/com/android/server/oir/IOirWorkerAudioCallback.aidl",
++        "java/com/android/server/oir/IOirWorkerBboxCallback.aidl",
++        "java/com/android/server/oir/IOirWorkerRealtimeBooleanCallback.aidl",
++        "java/com/android/server/oir/MemoryStats.aidl",
++    ],
++    backend: {
++        java: { enabled: true },
++        cpp:  { enabled: false },
++        ndk:  { enabled: true },
++    },
++}

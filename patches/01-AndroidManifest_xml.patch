@@ -1,0 +1,27 @@
+diff --git a/core/res/AndroidManifest.xml b/core/res/AndroidManifest.xml
+index 3a5dbd08dba5..e296ac414320 100644
+--- a/core/res/AndroidManifest.xml
++++ b/core/res/AndroidManifest.xml
+@@ -1693,6 +1693,22 @@
+         android:backgroundPermission="android.permission.RECORD_BACKGROUND_AUDIO"
+         android:protectionLevel="dangerous|instant" />
+ 
++    <!-- OpenIntelligenceRuntime (OIR) permissions (v0.3). Unflagged; lint-baseline suppresses UnflaggedApi. -->
++    <permission android:name="oir.permission.USE_TEXT"
++        android:label="@string/permlab_useOirText"
++        android:description="@string/permdesc_useOirText"
++        android:protectionLevel="normal" />
++    <permission android:name="oir.permission.USE_AUDIO"
++        android:label="@string/permlab_useOirAudio"
++        android:description="@string/permdesc_useOirAudio"
++        android:protectionLevel="dangerous" />
++    <permission android:name="oir.permission.USE_VISION"
++        android:label="@string/permlab_useOirVision"
++        android:description="@string/permdesc_useOirVision"
++        android:protectionLevel="dangerous" />
++
++
++
+     <!-- @SystemApi Allows an application to record audio while in the background.
+          This permission is not intended to be held by apps.
+          <p>Protection level: internal

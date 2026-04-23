@@ -1,0 +1,12 @@
+diff --git a/core/res/Android.bp b/core/res/Android.bp
+index 46cae5d2b0ea..c701358a1f99 100644
+--- a/core/res/Android.bp
++++ b/core/res/Android.bp
+@@ -191,6 +191,7 @@ android_app {
+         "com.android.media.flags.projection-aconfig",
+         "surfaceflinger_flags",
+         "power_flags",
++        "oir_flags",
+     ],
+ }
+ 

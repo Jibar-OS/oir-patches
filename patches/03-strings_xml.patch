@@ -1,0 +1,19 @@
+diff --git a/core/res/res/values/strings.xml b/core/res/res/values/strings.xml
+index f9abbcd1b24a..57594d113281 100644
+--- a/core/res/res/values/strings.xml
++++ b/core/res/res/values/strings.xml
+@@ -1567,6 +1567,14 @@
+     <string name="permdesc_modifyAudioSettings">Allows the app to modify global audio settings such as volume and which speaker is used for output.</string>
+ 
+     <!-- Title of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
++    <!-- OIR permissions (v0.3) -->
++    <string name="permlab_useOirText">use on-device AI for text</string>
++    <string name="permdesc_useOirText">Allows the app to send text to the on-device AI runtime for inference (summarization, generation, embedding, and similar text operations). The app must already have access to the text it submits.</string>
++    <string name="permlab_useOirAudio">use on-device AI for audio</string>
++    <string name="permdesc_useOirAudio">Allows the app to send audio to the on-device AI runtime for inference (transcription, synthesis, classification). The app must already have audio-access permissions such as RECORD_AUDIO to obtain the audio.</string>
++    <string name="permlab_useOirVision">use on-device AI for images</string>
++    <string name="permdesc_useOirVision">Allows the app to send images to the on-device AI runtime for inference (description, embedding, classification, object detection). The app must already have image-access permissions such as CAMERA to obtain the images.</string>
++
+     <string name="permlab_recordAudio">record audio</string>
+     <!-- Description of an application permission, listed so the user can choose whether they want to allow the application to do this. -->
+     <string name="permdesc_recordAudio">This app can record audio using the microphone while the app is in use.</string>

@@ -2,7 +2,7 @@ diff --git a/core/res/AndroidManifest.xml b/core/res/AndroidManifest.xml
 index 3a5dbd08dba5..e296ac414320 100644
 --- a/core/res/AndroidManifest.xml
 +++ b/core/res/AndroidManifest.xml
-@@ -1693,6 +1693,22 @@
+@@ -1693,6 +1693,25 @@
          android:backgroundPermission="android.permission.RECORD_BACKGROUND_AUDIO"
          android:protectionLevel="dangerous|instant" />
  
@@ -10,15 +10,18 @@ index 3a5dbd08dba5..e296ac414320 100644
 +    <permission android:name="oir.permission.USE_TEXT"
 +        android:label="@string/permlab_useOirText"
 +        android:description="@string/permdesc_useOirText"
-+        android:protectionLevel="normal" />
++        android:protectionLevel="normal"
++        android:featureFlag="com.android.oir.flags.oir_v1_api" />
 +    <permission android:name="oir.permission.USE_AUDIO"
 +        android:label="@string/permlab_useOirAudio"
 +        android:description="@string/permdesc_useOirAudio"
-+        android:protectionLevel="dangerous" />
++        android:protectionLevel="dangerous"
++        android:featureFlag="com.android.oir.flags.oir_v1_api" />
 +    <permission android:name="oir.permission.USE_VISION"
 +        android:label="@string/permlab_useOirVision"
 +        android:description="@string/permdesc_useOirVision"
-+        android:protectionLevel="dangerous" />
++        android:protectionLevel="dangerous"
++        android:featureFlag="com.android.oir.flags.oir_v1_api" />
 +
 +
 +

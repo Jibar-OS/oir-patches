@@ -1,0 +1,20 @@
+diff --git a/core/api/current.txt b/core/api/current.txt
+index a1d5522e6ace..46522768794c 100644
+--- a/core/api/current.txt
++++ b/core/api/current.txt
+@@ -340,12 +340,15 @@ package android {
+     field public static final String UNINSTALL_SHORTCUT = "com.android.launcher.permission.UNINSTALL_SHORTCUT";
+     field public static final String UPDATE_DEVICE_STATS = "android.permission.UPDATE_DEVICE_STATS";
+     field public static final String UPDATE_PACKAGES_WITHOUT_USER_ACTION = "android.permission.UPDATE_PACKAGES_WITHOUT_USER_ACTION";
++    field public static final String USE_AUDIO = "oir.permission.USE_AUDIO";
+     field public static final String USE_BIOMETRIC = "android.permission.USE_BIOMETRIC";
+     field public static final String USE_EXACT_ALARM = "android.permission.USE_EXACT_ALARM";
+     field @Deprecated public static final String USE_FINGERPRINT = "android.permission.USE_FINGERPRINT";
+     field public static final String USE_FULL_SCREEN_INTENT = "android.permission.USE_FULL_SCREEN_INTENT";
+     field public static final String USE_ICC_AUTH_WITH_DEVICE_IDENTIFIER = "android.permission.USE_ICC_AUTH_WITH_DEVICE_IDENTIFIER";
+     field public static final String USE_SIP = "android.permission.USE_SIP";
++    field public static final String USE_TEXT = "oir.permission.USE_TEXT";
++    field public static final String USE_VISION = "oir.permission.USE_VISION";
+     field public static final String UWB_RANGING = "android.permission.UWB_RANGING";
+     field public static final String VIBRATE = "android.permission.VIBRATE";
+     field public static final String WAKE_LOCK = "android.permission.WAKE_LOCK";

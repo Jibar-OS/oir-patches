@@ -1,0 +1,14 @@
+diff --git a/core/api/lint-baseline.txt b/core/api/lint-baseline.txt
+index 1cb9124202cc..06c9040b01b9 100644
+--- a/core/api/lint-baseline.txt
++++ b/core/api/lint-baseline.txt
+@@ -1726,3 +1726,9 @@ UnflaggedApi: android.view.inputmethod.InlineSuggestionsRequest.Builder#setClien
+     New API must be flagged with @FlaggedApi: method android.view.inputmethod.InlineSuggestionsRequest.Builder.setClientSupported(boolean)
+ UnflaggedApi: android.view.inputmethod.InlineSuggestionsRequest.Builder#setServiceSupported(boolean):
+     New API must be flagged with @FlaggedApi: method android.view.inputmethod.InlineSuggestionsRequest.Builder.setServiceSupported(boolean)
++UnflaggedApi: android.Manifest.permission#USE_AUDIO:
++    New API must be flagged with @FlaggedApi: field android.Manifest.permission.USE_AUDIO
++UnflaggedApi: android.Manifest.permission#USE_TEXT:
++    New API must be flagged with @FlaggedApi: field android.Manifest.permission.USE_TEXT
++UnflaggedApi: android.Manifest.permission#USE_VISION:
++    New API must be flagged with @FlaggedApi: field android.Manifest.permission.USE_VISION
